@@ -1,0 +1,196 @@
+/* EXTRA FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+.nunito-font {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* TEMP STYLING (FOR CSS TESTS) */
+.red-border-3px {
+  border: 3px solid red;
+}
+
+.green-border-2px {
+  border: 2px solid green;
+}
+
+.blue-border-1px {
+  border: 1px solid blue;
+}
+
+/* ANIMATIONS */
+@keyframes loading-dom {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* CSS GLOBAL VARIABLES */
+:root {
+  --main-color-light: #ccffcc;
+  --main-color-medium: #00cc00;
+  --main-color-dark: #006600;
+  --average-unit: calc((1vw + 1vh) / 2);
+}
+
+/* CSS INITIAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* > a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+html,
+body {
+  width: 100%;
+  font-size: 20px;
+  line-height: 1.15;
+  background-color: var(--main-color-light);
+  color: white;
+  animation: loading-dom 1s ease-in;
+}
+
+/* MAIN DIV */
+#main-div {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+#main-div > * {
+  width: 100%;
+  flex: 1 1 100%;
+}
+
+#main-div > header,
+footer {
+  background: linear-gradient(
+    200deg,
+    var(--main-color-dark),
+    var(--main-color-medium)
+  );
+}
+
+header {
+  order: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+}
+
+main {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  order: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HEADER */
+#my-logo {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+#credits-div,
+#themes-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 5px;
+}
+
+#credits-div a {
+  text-decoration: underline;
+}
+
+#themes-div select {
+  width: 35%;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* MAIN */
+#app-div {
+  width: 50%;
+  min-height: 50vh;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  padding: var(--average-unit);
+  margin: var(--average-unit);
+  color: black;
+}
+
+/* SCREEN VARIATION - MEDIUM SCREENS */
+@media all and (min-width: 700px) and (max-width: 1000px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+}
+
+/* SCREEN VARIATION -  SMALL SCREENS*/
+@media all and (max-width: 699px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+
+  /* HEADER */
+  #my-logo {
+    width: 120px;
+  }
+
+  header {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* MAIN */
+  #app-div {
+    width: 80%;
+  }
+}
