@@ -98,8 +98,9 @@ footer {
 header {
   order: 1;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: var(--average-unit);
   font-size: 2rem;
   text-align: center;
 }
@@ -124,6 +125,14 @@ footer {
   height: auto;
   object-fit: cover;
   margin-top: 10px;
+}
+
+#main-title {
+  transition: transform 0.2s ease;
+}
+
+#main-title:hover {
+  text-decoration: underline;
 }
 
 /* FOOTER */
@@ -155,9 +164,41 @@ footer {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  padding: var(--average-unit);
+  padding: calc(var(--average-unit) * 2);
   margin: var(--average-unit);
   color: black;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  gap: var(--average-unit);
+}
+
+.app-buttons {
+  padding: var(--average-unit) calc(var(--average-unit) * 2);
+  font-family: "Nunito";
+  font-size: 1rem;
+  color: #333333;
+  background-color: var(--main-color-light);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s, color 0.2s;
+  box-shadow: 0 5px 10px var(--main-color-medium);
+}
+
+.app-buttons:hover {
+  background-color: var(--main-color-medium);
+  font-weight: bold;
+  color: white;
+  transform: translateY(-2.5px);
+  box-shadow: 0 10px 15px var(--main-color-dark);
+}
+
+.app-buttons:active {
+  transform: translateY(0);
+  box-shadow: 0 10px 15px var(--main-color-dark);
 }
 
 /* SCREEN VARIATION - MEDIUM SCREENS */
@@ -192,5 +233,9 @@ footer {
   /* MAIN */
   #app-div {
     width: 80%;
+  }
+
+  .app-buttons {
+    padding: calc(var(--average-unit) * 2) calc(var(--average-unit) * 4);
   }
 }

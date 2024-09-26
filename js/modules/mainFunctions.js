@@ -22,8 +22,8 @@ export default class mainFunctions {
     gray: ["#e6e6e6", "#666666", "#333333"],
   };
 
-  exe() {
-    this.eventsListener(this.linkMainTitle, "click", this.refreshPage);
+  exec() {
+    this.eventsListener(this.linkMainTitle, "click", this.reloadHomepage);
     this.eventsListener(
       this.selectThemes,
       "change",
@@ -35,8 +35,8 @@ export default class mainFunctions {
     element.addEventListener(eventType, callback);
   }
 
-  refreshPage() {
-    location.reload();
+  reloadHomepage() {
+    window.location.href = "../../index.html";
   }
 
   chooseTheme() {
