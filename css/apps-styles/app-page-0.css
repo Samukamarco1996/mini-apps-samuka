@@ -1,3 +1,78 @@
-#app-div {
-  color: red;
+/* VARIABLES IMPORT */
+@import "../variables.css";
+@import "../fonts.css";
+
+#app-div > div:nth-of-type(1) {
+  width: 100%;
+  padding: var(--average-unit);
+  border: 1px solid var(--main-color-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: var(--average-unit);
+}
+
+#app-div > div:nth-of-type(2) {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#app-div > div:nth-of-type(2) > div {
+  width: 50%;
+  border: 1px solid var(--main-color-light);
+  padding: var(--average-unit);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--average-unit);
+}
+
+#app-div input {
+  width: 80%;
+  font-family: "Nunito";
+  font-size: 1rem;
+  padding: calc(var(--average-unit) / 2);
+  border-radius: var(--average-unit);
+  border: 1px solid var(--main-color-medium);
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+#app-div input:focus {
+  border-color: var(--main-color-dark);
+}
+
+#app-div button {
+  background-color: var(--main-color-dark);
+  font-family: "Nunito";
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: var(--average-unit) calc(var(--average-unit) * 2);
+  border: none;
+  border-radius: var(--average-unit);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* SCREEN VARIATION -  SMALL SCREENS*/
+@media all and (max-width: 699px) {
+  #app-div > div:nth-of-type(2) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #app-div > div:nth-of-type(2) > div {
+    width: 100%;
+  }
+
+  #app-div button {
+    padding: calc(var(--average-unit) * 2) calc(var(--average-unit) * 4);
+  }
 }

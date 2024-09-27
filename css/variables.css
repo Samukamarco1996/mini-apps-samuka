@@ -1,0 +1,7 @@
+/* CSS GLOBAL VARIABLES */
+:root {
+  --main-color-light: #ccffcc;
+  --main-color-medium: #00cc00;
+  --main-color-dark: #006600;
+  --average-unit: calc((1vw + 1vh) / 2);
+}

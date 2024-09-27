@@ -1,11 +1,6 @@
-/* EXTRA FONTS */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-.nunito-font {
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-}
+/* VARIABLES IMPORT */
+@import "./variables.css";
+@import "./fonts.css";
 
 /* TEMP STYLING (FOR CSS TESTS) */
 .red-border-3px {
@@ -28,14 +23,6 @@
   to {
     opacity: 1;
   }
-}
-
-/* CSS GLOBAL VARIABLES */
-:root {
-  --main-color-light: #ccffcc;
-  --main-color-medium: #00cc00;
-  --main-color-dark: #006600;
-  --average-unit: calc((1vw + 1vh) / 2);
 }
 
 /* CSS INITIAL RESET */
@@ -162,9 +149,10 @@ footer {
   width: 50%;
   min-height: 50vh;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
+  border: 2.5px dashed var(--main-color-dark);
+  border-radius: var(--average-unit);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  padding: calc(var(--average-unit) * 2);
+  padding: calc(var(--average-unit) * 1.5);
   margin: var(--average-unit);
   color: black;
   display: flex;
@@ -182,7 +170,7 @@ footer {
   color: #333333;
   background-color: var(--main-color-light);
   border: none;
-  border-radius: 10px;
+  border-radius: var(--average-unit);
   cursor: pointer;
   transition: background-color 0.2s, transform 0.2s, color 0.2s;
   box-shadow: 0 5px 10px var(--main-color-medium);
@@ -233,6 +221,7 @@ footer {
   /* MAIN */
   #app-div {
     width: 80%;
+    padding: var(--average-unit);
   }
 
   .app-buttons {
