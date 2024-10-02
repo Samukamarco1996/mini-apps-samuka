@@ -40,12 +40,12 @@
 
 html {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 body {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
 }
@@ -63,6 +63,7 @@ body {
 /* MAIN DIV */
 #main-div {
   width: 100%;
+  min-height: 99dvh;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
@@ -137,17 +138,31 @@ footer {
 }
 
 #themes-div select {
-  width: 35%;
+  width: 100%;
   font-family: "Nunito", sans-serif;
   font-weight: bold;
   font-size: 1rem;
   text-align: center;
+  background-color: var(--main-color-medium);
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: var(--average-unit);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#themes-div select:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#themes-div select option {
+  color: black;
 }
 
 /* MAIN */
 #app-div {
   width: 50%;
-  min-height: 50vh;
+  min-height: 50dvh;
   background: rgba(255, 255, 255, 0.8);
   border: 2.5px dashed var(--main-color-dark);
   border-radius: var(--average-unit);

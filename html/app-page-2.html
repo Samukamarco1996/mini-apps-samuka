@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Criador e Manipulador de Listas" />
+    <meta name="description" content="Buscador de Notebooks" />
     <link rel="stylesheet" href="../css/main-styles.css" />
-    <link rel="stylesheet" href="../css/apps-styles/app-page-0.css" />
+    <link rel="stylesheet" href="../css/apps-styles/app-page-2.css" />
     <script type="module" src="../js/main.js"></script>
-    <script type="module" src="../js/modules/app-page-0.js"></script>
-    <title>Criador e Manipulador de Listas</title>
+    <script type="module" src="../js/modules/app-page-2.js"></script>
+    <title>Buscador de Notebooks</title>
   </head>
   <body class="nunito-font red-border-3px">
     <div id="main-div">
@@ -18,39 +18,42 @@
           <img id="my-logo" src="../imgs/my-logo.jpg" alt="samukatech-logo" />
         </div>
         <div>
-          <a id="main-title">Criador e Manipulador de Listas</a>
+          <a id="main-title">Buscador de Notebooks</a>
         </div>
       </header>
       <main>
         <section id="app-div">
           <div>
-            <input type="text" />
-            <button title="Adicione até 50 itens, no máximo">
-              Adicionar Item
-            </button>
+            <p>
+              Neste catálogo, encontre notebooks que se encaixam nos seus
+              critérios! Use os filtros de pesquisa para encontrar os aparelhos
+              ideais para você!
+            </p>
+            <p></p>
+            <p>
+              ATENÇÃO: Estas informações são geradas por INTELIGÊNCIA ARTIFICIAL
+              e portanto podem estar incorretas!
+            </p>
           </div>
           <div>
-            <div>
-              <button>Visualizar Lista</button><button>Limpar Lista</button
-              ><button title="Esta função funciona apenas com palavras e nomes">
-                Ordenação Crescente</button
-              ><button title="Esta função funciona apenas com palavras e nomes">
-                Ordenação Decrescente
-              </button>
-            </div>
-            <div>
-              <button title="Esta função funciona apenas com números">
-                Filtrar Números Pares
-              </button>
-              <button title="Esta função funciona apenas com números">
-                Filtrar Números Ímpares</button
-              ><button title="Esta função funciona apenas com números">
-                Filtrar Números Positivos</button
-              ><button title="Esta função funciona apenas com números">
-                Filtrar Números Negativos
-              </button>
-            </div>
+            <fieldset>
+              <legend>FILTRO:</legend>
+              <p class="filter-section" data-filter="brand">
+                Marca: <label><input type="checkbox" value="Dell" /> Dell</label
+                ><label><input type="checkbox" value="HP" /> HP</label>
+                <label><input type="checkbox" value="ASUS" /> ASUS</label
+                ><label><input type="checkbox" value="Apple" /> Apple</label>
+                <label
+                  ><input type="checkbox" value="Positivo" /> Positivo</label
+                >
+              </p>
+              <hr />
+              <p class="filter-section" data-filter="filter">
+                <button>Filtrar</button>
+              </p>
+            </fieldset>
           </div>
+          <div></div>
         </section>
       </main>
       <footer>

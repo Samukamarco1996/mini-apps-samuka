@@ -57,10 +57,7 @@
 /* SCREEN VARIATION -  SMALL SCREENS*/
 @media all and (max-width: 699px) {
   #app-div button {
-    padding: calc(var(--average-unit) * 2) calc(var(--average-unit) * 4);
-  }
-
-  #app-div button {
     width: 100%;
+    padding: calc(var(--average-unit) * 2) calc(var(--average-unit) * 4);
   }
 }

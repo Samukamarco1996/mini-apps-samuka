@@ -23,7 +23,7 @@ export default class mainFunctions {
   };
 
   exec() {
-    this.eventsListener(this.linkMainTitle, "click", this.reloadHomepage);
+    this.eventsListener(this.linkMainTitle, "click", this.reloadPage);
     this.eventsListener(
       this.selectThemes,
       "change",
@@ -35,8 +35,8 @@ export default class mainFunctions {
     element.addEventListener(eventType, callback);
   }
 
-  reloadHomepage() {
-    window.location.href = "../../index.html";
+  reloadPage() {
+    location.reload();
   }
 
   chooseTheme() {

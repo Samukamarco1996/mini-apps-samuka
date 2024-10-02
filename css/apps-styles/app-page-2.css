@@ -11,50 +11,48 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  gap: var(--average-unit);
+}
+
+#app-div > div:nth-of-type(1) > p:nth-of-type(3) {
+  color: red;
 }
 
 #app-div > div:nth-of-type(2) {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
-#app-div > div:nth-of-type(2) > div {
-  width: 50%;
   border: 1px solid var(--main-color-light);
   padding: var(--average-unit);
   display: flex;
+  justify-content: center;
+}
+
+#app-div > div:nth-of-type(3) {
+  width: 100%;
+  border: 1px solid var(--main-color-light);
+  padding: var(--average-unit);
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#app-div > div:nth-of-type(3) a:hover {
+  text-decoration: underline;
+}
+
+#app-div fieldset {
+  width: 100%;
+  display: flex;
+  padding: var(--average-unit);
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
   gap: var(--average-unit);
 }
 
-#app-div > div:nth-of-type(2) > div button {
-  width: 75%;
-}
-
-#app-div input {
-  width: 80%;
-  font-family: "Nunito";
-  font-size: 1rem;
-  padding: calc(var(--average-unit) / 2);
-  border-radius: var(--average-unit);
-  border: 1px solid var(--main-color-medium);
-  outline: none;
-  transition: border 0.2s ease;
-}
-
-#app-div input:focus {
-  border-color: var(--main-color-dark);
-}
-
-#app-div button {
+.filter-section button {
+  margin: 0 auto;
   background-color: var(--main-color-dark);
   font-family: "Nunito";
   font-size: 1rem;
   font-weight: bold;
+  width: 30%;
   color: white;
   padding: var(--average-unit) calc(var(--average-unit) * 2);
   border: none;
@@ -64,18 +62,7 @@
 
 /* SCREEN VARIATION -  SMALL SCREENS*/
 @media all and (max-width: 699px) {
-  #app-div > div:nth-of-type(2) {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #app-div > div:nth-of-type(2) > div {
-    width: 100%;
-  }
-
-  #app-div button {
+  .filter-section button {
     width: 100%;
     padding: calc(var(--average-unit) * 2) calc(var(--average-unit) * 4);
   }
