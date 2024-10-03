@@ -109,8 +109,8 @@ footer {
 
 /* HEADER */
 #my-logo {
-  width: 150px;
-  height: auto;
+  width: 100px;
+  height: 80px;
   object-fit: cover;
   margin-top: 10px;
 }
