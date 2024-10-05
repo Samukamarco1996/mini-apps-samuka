@@ -4,48 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="description"
-      content="Neste web app compartilho meu conhecimento e progresso em desenvolvimento front-end!"
-    />
-    <link rel="stylesheet" href="./css/main-styles.css" />
-    <script type="module" src="./js/main.js"></script>
-    <title>Mini Apps do Samuka</title>
+    <meta name="description" content="Calculadora de Idade" />
+    <link rel="stylesheet" href="../css/main-styles.css" />
+    <link rel="stylesheet" href="../css/apps-styles/app-page-3.css" />
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/modules/app-page-3.js"></script>
+    <title>Calculadora de Idade</title>
   </head>
   <body class="nunito-font red-border-3px">
     <div id="main-div">
       <header>
         <div>
-          <img
-            id="my-logo"
-            src="./imgs/my-logo.jpg"
-            alt="samukatech-logo"
-            title="Samukatech: Tecnologia que te entende!"
-          />
+          <img id="my-logo" src="../imgs/my-logo.jpg" alt="samukatech-logo" />
         </div>
         <div>
-          <a id="main-title" title="Clique aqui para recarregar esta página"
-            >Bem-vindos à suite de mini apps do Samuka!</a
-          >
+          <a id="main-title">Calculadora de Idade</a>
         </div>
       </header>
       <main>
         <section id="app-div">
-          <button class="app-buttons" title="Criador e Manipulador de Listas">
-            Criador e Manipulador de Listas
-          </button>
-          <button
-            class="app-buttons"
-            title="Exercícios com Expressões Regulares"
-          >
-            Exercícios com Expressões Regulares
-          </button>
-          <button class="app-buttons" title="Buscador de Notebooks">
-            Buscador de Notebooks
-          </button>
-          <button class="app-buttons" title="Calculadora de Idade">
-            Calculadora de Idade
-          </button>
+          <div>
+            <div>
+              <p>Digite sua idade e descubra em que ano você nasceu!</p>
+              <input type="number" /><button>Calcular</button>
+              <label>O resultado aparecerá aqui!</label>
+            </div>
+            <div><p>OU</p></div>
+            <div>
+              <p>Digite o ano em que você nasceu e descubra sua idade!</p>
+              <input type="number" /><button>Calcular</button>
+              <label>O resultado aparecerá aqui!</label>
+            </div>
+          </div>
         </section>
       </main>
       <footer>
