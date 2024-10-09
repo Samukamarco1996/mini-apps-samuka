@@ -5,6 +5,7 @@ function initialExe() {
   const mainFunctionsExe = new mainFunctions(
     window.document.documentElement,
     window.document.getElementById("main-title"),
+    window.document.getElementById("my-logo-clickable"),
     window.document.getElementById("themes-select")
   );
   mainFunctionsExe.exec();

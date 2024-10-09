@@ -1,7 +1,8 @@
 export default class mainFunctions {
-  constructor(cssVariables, linkMainTitle, selectThemes) {
+  constructor(cssVariables, linkMainTitle, linkMyLogo, selectThemes) {
     this.cssVariables = cssVariables;
     this.linkMainTitle = linkMainTitle;
+    this.linkMyLogo = linkMyLogo;
     this.selectThemes = selectThemes;
   }
 
@@ -24,6 +25,7 @@ export default class mainFunctions {
 
   exec() {
     this.eventsListener(this.linkMainTitle, "click", this.reloadPage);
+    this.eventsListener(this.linkMyLogo, "click", this.loadHomepage);
     this.eventsListener(
       this.selectThemes,
       "change",
@@ -37,6 +39,10 @@ export default class mainFunctions {
 
   reloadPage() {
     location.reload();
+  }
+
+  loadHomepage() {
+    window.location.href = "../../index.html";
   }
 
   chooseTheme() {

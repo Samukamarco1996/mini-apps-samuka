@@ -109,10 +109,18 @@ footer {
 
 /* HEADER */
 #my-logo {
-  width: 150px;
+  width: 120px;
   height: auto;
   object-fit: cover;
   margin-top: 10px;
+  filter: grayscale(100%);
+  transition: transform 0.2s ease;
+}
+
+#my-logo:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  filter: grayscale(0%);
 }
 
 #main-title {
@@ -168,7 +176,7 @@ footer {
   border-radius: var(--average-unit);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   padding: calc(var(--average-unit) * 1.5);
-  margin: var(--average-unit);
+  margin: calc(var(--average-unit) * 5);
   color: black;
   display: flex;
   flex-flow: row wrap;
@@ -218,7 +226,7 @@ footer {
 
   /* HEADER */
   #my-logo {
-    width: 120px;
+    width: 100px;
   }
 
   header {
@@ -234,6 +242,7 @@ footer {
   #app-div {
     width: 80%;
     padding: var(--average-unit);
+    margin: calc(var(--average-unit) * 2.5);
   }
 
   .app-buttons {
