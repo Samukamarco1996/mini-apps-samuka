@@ -2,30 +2,7 @@
 @import "../variables.css";
 @import "../fonts.css";
 
-/* ANIMATIONS */
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-result {
-  animation: fade 1s ease-in-out;
-}
-
-/* PAGE STYLING */
-#app-div > div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-#app-div > div > div {
+#app-div > div:nth-of-type(1) {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -34,28 +11,30 @@
   text-align: center;
   padding: var(--average-unit);
   border: 1px solid var(--main-color-light);
+}
+
+#app-div > div:nth-of-type(1) > * {
   margin: var(--average-unit);
 }
 
-#app-div > div > div > * {
-  margin: var(--average-unit);
-}
-
-#app-div > div > div:nth-child(3) img {
-  width: 100px;
-  height: auto;
-  display: none;
+#app-div > div:nth-of-type(2) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--average-unit);
+  border: 1px solid var(--main-color-light);
 }
 
 #app-div input {
-  height: 50px;
-  width: 30%;
+  width: 60%;
   font-family: "Nunito";
   font-size: 1rem;
 }
 
 #app-div button {
-  width: 30%;
   background-color: var(--main-color-dark);
   font-family: "Nunito";
   font-size: 1rem;
@@ -67,6 +46,21 @@
   cursor: pointer;
 }
 
+#app-div > div:nth-of-type(2) p {
+  color: var(--main-color-dark);
+}
+
+#app-div > div:nth-of-type(2) p:nth-of-type(1) {
+  font-size: 1.5rem;
+}
+
+/* SCREEN VARIATION - MEDIUM SCREENS */
+@media all and (min-width: 700px) and (max-width: 1000px) {
+  #app-div input {
+    width: 70%;
+  }
+}
+
 /* SCREEN VARIATION -  SMALL SCREENS*/
 @media all and (max-width: 699px) {
   #app-div > div {
@@ -76,14 +70,8 @@
     align-items: center;
   }
 
-  #app-div > div > div:nth-child(3) img {
-    width: 80px;
-    height: auto;
-  }
-
   #app-div input {
-    height: 30px;
-    width: 60%;
+    width: 80%;
   }
 
   #app-div button {

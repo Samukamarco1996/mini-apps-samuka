@@ -2,7 +2,7 @@
 @import "./variables.css";
 @import "./fonts.css";
 
-/* TEMP STYLING (FOR CSS TESTS) */
+/* TEMPORARY STYLING (FOR CSS TESTS) */
 .red-border-3px {
   border: 3px solid red;
 }
@@ -38,6 +38,7 @@
   cursor: pointer;
 }
 
+/* INITIAL STYLING */
 html {
   width: 100vw;
   min-height: 100dvh;
@@ -58,6 +59,23 @@ body {
   background-color: var(--main-color-light);
   color: white;
   animation: loading-dom 1s ease-in;
+}
+
+header {
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--average-unit);
+  font-size: 2rem;
+  text-align: center;
+}
+
+footer {
+  order: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* MAIN DIV */
@@ -83,16 +101,6 @@ footer {
   );
 }
 
-header {
-  order: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--average-unit);
-  font-size: 2rem;
-  text-align: center;
-}
-
 main {
   order: 2;
   display: flex;
@@ -100,14 +108,7 @@ main {
   align-items: center;
 }
 
-footer {
-  order: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* HEADER */
+/* HEADER TAG */
 #my-logo {
   width: 120px;
   height: auto;
@@ -131,7 +132,7 @@ footer {
   text-decoration: underline;
 }
 
-/* FOOTER */
+/* FOOTER TAG */
 #credits-div,
 #themes-div {
   display: flex;
@@ -167,7 +168,7 @@ footer {
   color: black;
 }
 
-/* MAIN */
+/* MAIN TAG */
 #app-div {
   width: 50%;
   min-height: 50dvh;
@@ -224,11 +225,6 @@ footer {
     font-size: 16px;
   }
 
-  /* HEADER */
-  #my-logo {
-    width: 100px;
-  }
-
   header {
     order: 1;
     display: flex;
@@ -238,7 +234,10 @@ footer {
     text-align: center;
   }
 
-  /* MAIN */
+  #my-logo {
+    width: 100px;
+  }
+
   #app-div {
     width: 80%;
     padding: var(--average-unit);
