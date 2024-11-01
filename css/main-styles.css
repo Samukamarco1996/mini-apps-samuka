@@ -170,17 +170,23 @@ main {
 
 /* MAIN TAG */
 #app-div {
+  color: black;
   width: 50%;
   min-height: 50dvh;
   background: rgba(255, 255, 255, 0.8);
   border: 2.5px dashed var(--main-color-dark);
   border-radius: var(--average-unit);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  padding: calc(var(--average-unit) * 1.5);
   margin: calc(var(--average-unit) * 5);
+}
+
+.app-buttons-div {
+  width: 60%;
+  padding: calc(var(--average-unit) * 1.5);
   color: black;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
+  margin: auto auto;
   justify-content: space-around;
   align-items: center;
   align-content: space-around;
@@ -188,6 +194,7 @@ main {
 }
 
 .app-buttons {
+  width: 100%;
   padding: var(--average-unit) calc(var(--average-unit) * 2);
   font-family: "Nunito";
   font-size: 1rem;
@@ -216,6 +223,10 @@ main {
   body {
     font-size: 18px;
   }
+
+  .app-buttons-div {
+    width: 70%;
+  }
 }
 
 /* SCREEN VARIATION -  SMALL SCREENS*/
@@ -240,8 +251,12 @@ main {
 
   #app-div {
     width: 80%;
-    padding: var(--average-unit);
     margin: calc(var(--average-unit) * 2.5);
+  }
+
+  .app-buttons-div {
+    width: 80%;
+    padding: var(--average-unit);
   }
 
   .app-buttons {

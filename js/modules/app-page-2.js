@@ -1,6 +1,6 @@
 import laptopsDatabase from "../../dbs/app-page-2-database.js";
 
-class app2 {
+class App2 {
   constructor(paragraphCatalogInfo, inputCheckboxes, buttonFilter, divResults) {
     this.paragraphCatalogInfo = paragraphCatalogInfo;
     this.inputCheckboxes = inputCheckboxes;
@@ -77,7 +77,7 @@ class app2 {
   }
 }
 
-const app2Exe = new app2(
+const app2Exe = new App2(
   window.document.querySelector(
     "#app-div > div:nth-of-type(1) > p:nth-of-type(2)"
   ),

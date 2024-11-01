@@ -1,4 +1,4 @@
-export default class mainFunctions {
+export default class MainFunctions {
   constructor(cssVariables, linkMainTitle, linkMyLogo, selectThemes) {
     this.cssVariables = cssVariables;
     this.linkMainTitle = linkMainTitle;

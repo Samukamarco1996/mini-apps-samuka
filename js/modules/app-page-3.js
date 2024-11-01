@@ -1,4 +1,4 @@
-class app3 {
+class App3 {
   constructor(inputsAge, buttonsCalculate, labelsResult) {
     this.inputsAge = inputsAge;
     this.buttonsCalculate = buttonsCalculate;
@@ -73,7 +73,7 @@ class app3 {
   }
 }
 
-const app3Exe = new app3(
+const app3Exe = new App3(
   window.document.querySelectorAll("#app-div input"),
   window.document.querySelectorAll("#app-div button"),
   window.document.querySelectorAll("#app-div label")

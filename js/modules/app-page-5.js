@@ -1,4 +1,4 @@
-class app5 {
+class App5 {
   constructor(inputZipCode, buttonSearch, paragraphsSearchResult) {
     this.inputZipCode = inputZipCode;
     this.buttonSearch = buttonSearch;
@@ -47,14 +47,14 @@ class app5 {
     if (this.isNotEmpty(this.inputZipCode)) {
       if (this.inputZipCode.value.length === 8) {
         try {
-          const apiResquest = await fetch(
+          const apiRequest = await fetch(
             `https://viacep.com.br/ws/${this.inputZipCode.value}/json/`
           );
 
-          if (!apiResquest.ok) {
+          if (!apiRequest.ok) {
             throw new Error("Erro! Por favor, tente novamente mais tarde!");
           } else {
-            const apiAnswer = await apiResquest.json();
+            const apiAnswer = await apiRequest.json();
             if (apiAnswer.erro) {
               window.alert("Digite um CEP válido!");
               this.inputZipCode.value = "";
@@ -85,7 +85,7 @@ class app5 {
   }
 }
 
-const app5Exe = new app5(
+const app5Exe = new App5(
   window.document.querySelector("#app-div input"),
   window.document.querySelector("#app-div button"),
   window.document.querySelectorAll("#app-div > div:nth-of-type(2) p")

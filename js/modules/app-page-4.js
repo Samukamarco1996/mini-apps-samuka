@@ -1,4 +1,4 @@
-class app4 {
+class App4 {
   constructor(
     buttonsGame,
     inputGuessNumber,
@@ -141,7 +141,7 @@ class app4 {
   }
 }
 
-const app4Exe = new app4(
+const app4Exe = new App4(
   window.document.querySelectorAll("#app-div > div > div:nth-child(1) button"),
   window.document.querySelector("#app-div > div > div:nth-child(2) input"),
   window.document.querySelector("#app-div > div > div:nth-child(2) button"),

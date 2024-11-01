@@ -1,8 +1,8 @@
-import mainFunctions from "./modules/mainFunctions.js";
+import MainFunctions from "./modules/mainFunctions.js";
 
 // MAINFUNCTIONS CALLING AND CHOSEN APP CALLER
 function initialExe() {
-  const mainFunctionsExe = new mainFunctions(
+  const mainFunctionsExe = new MainFunctions(
     window.document.documentElement,
     window.document.getElementById("main-title"),
     window.document.getElementById("my-logo-clickable"),

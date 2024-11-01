@@ -1,4 +1,4 @@
-class app1 {
+class App1 {
   constructor(textareaElement, buttonsRegexActions) {
     this.textareaElement = textareaElement;
     this.buttonsRegexActions = buttonsRegexActions;
@@ -175,7 +175,7 @@ class app1 {
   }
 }
 
-const app1Exe = new app1(
+const app1Exe = new App1(
   window.document.querySelector("#app-div textarea"),
   window.document.querySelectorAll("#app-div button")
 );

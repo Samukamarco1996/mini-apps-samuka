@@ -1,4 +1,4 @@
-class app0 {
+class App0 {
   constructor(inputAddItem, buttonAddItem, buttonArrayHandlers) {
     this.inputAddItem = inputAddItem;
     this.buttonAddItem = buttonAddItem;
@@ -224,7 +224,7 @@ class app0 {
   }
 }
 
-const app0Exe = new app0(
+const app0Exe = new App0(
   window.document.querySelector("#app-div input"),
   window.document.querySelector("#app-div > div:nth-of-type(1) > button"),
   window.document.querySelectorAll("#app-div > div:nth-of-type(2) button")
