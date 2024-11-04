@@ -1,0 +1,120 @@
+/* VARIABLES IMPORT */
+@import "../variables.css";
+@import "../fonts.css";
+
+#app-div > div:nth-of-type(1) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: var(--average-unit);
+  text-align: center;
+}
+
+#app-div > div:nth-of-type(2) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: var(--average-unit);
+  margin: var(--average-unit);
+}
+
+#app-div > div:nth-of-type(2) > input {
+  width: 60%;
+  font-family: "Nunito";
+  font-size: 1rem;
+}
+
+#app-div > div:nth-of-type(2) > button {
+  width: 30%;
+  background-color: var(--main-color-dark);
+  font-family: "Nunito";
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: var(--average-unit) calc(var(--average-unit) * 2);
+  border: none;
+  border-radius: var(--average-unit);
+  cursor: pointer;
+}
+
+#app-div > div:nth-of-type(3) {
+  margin: calc(var(--average-unit) * 2.5);
+  display: flex;
+  flex-flow: column wrap;
+  gap: var(--average-unit);
+}
+
+.new-task {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+  background-color: var(--main-color-light);
+  border: 1px solid var(--main-color-medium);
+  gap: var(--average-unit);
+  padding: var(--average-unit);
+}
+
+.new-task input[type="checkbox"] {
+  width: calc(var(--average-unit) * 2);
+  height: calc(var(--average-unit) * 2);
+  cursor: pointer;
+}
+
+.new-task input[type="checkbox"]:checked + label {
+  color: var(--main-color-dark);
+  text-decoration: line-through;
+}
+
+.new-task label {
+  width: 80%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: left;
+  cursor: pointer;
+}
+
+.new-task > button {
+  background-color: tomato;
+  border: none;
+  border-radius: var(--average-unit);
+}
+
+.new-task > button img {
+  width: calc(var(--average-unit) * 5);
+  height: calc(var(--average-unit) * 5);
+  cursor: pointer;
+}
+
+/* SCREEN VARIATION - MEDIUM SCREENS */
+@media all and (min-width: 700px) and (max-width: 1000px) {
+  #app-div > div:nth-of-type(2) input {
+    width: 80%;
+  }
+}
+
+/* SCREEN VARIATION -  SMALL SCREENS*/
+@media all and (max-width: 699px) {
+  #app-div > div:nth-of-type(1) {
+    display: flex;
+  }
+
+  #app-div > div:nth-of-type(2) input {
+    width: 100%;
+  }
+
+  #app-div > div:nth-of-type(2) button {
+    width: 70%;
+    padding: calc(var(--average-unit) * 2) calc(var(--average-unit) * 4);
+  }
+
+  .new-task input[type="checkbox"] {
+    width: calc(var(--average-unit) * 4);
+    height: calc(var(--average-unit) * 4);
+  }
+
+  .new-task > button img {
+    width: calc(var(--average-unit) * 10);
+    height: calc(var(--average-unit) * 10);
+  }
+}
