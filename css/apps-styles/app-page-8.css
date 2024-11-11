@@ -1,0 +1,73 @@
+/* VARIABLES IMPORT */
+@import "../variables.css";
+@import "../fonts.css";
+
+#app-div > div:nth-of-type(1),
+#app-div > div:nth-of-type(2) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--average-unit);
+  margin: var(--average-unit);
+}
+
+#app-div > div:nth-of-type(1) > p:nth-last-of-type(1) {
+  color: var(--main-color-dark);
+  text-align: center;
+}
+
+#gallery {
+  border: 1px dotted var(--main-color-medium);
+  margin: calc(var(--average-unit) * 2);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--average-unit);
+  padding: var(--average-unit);
+}
+
+.pictures {
+  max-width: 100%;
+  max-height: 300px;
+  display: none;
+}
+
+#app-div input[type="file"] {
+  font-family: "Nunito";
+  font-size: 1rem;
+}
+
+#app-div button {
+  width: 30%;
+  background-color: var(--main-color-dark);
+  font-family: "Nunito";
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: var(--average-unit) calc(var(--average-unit) * 2);
+  border: none;
+  border-radius: var(--average-unit);
+  cursor: pointer;
+}
+
+/* SCREEN VARIATION - MEDIUM SCREENS */
+@media all and (min-width: 700px) and (max-width: 1000px) {
+}
+
+/* SCREEN VARIATION -  SMALL SCREENS*/
+@media all and (max-width: 699px) {
+  #app-div input {
+    width: 100%;
+  }
+
+  #app-div button {
+    width: 70%;
+    padding: calc(var(--average-unit) * 2) calc(var(--average-unit) * 4);
+  }
+
+  .pictures {
+    max-width: 60%;
+  }
+}

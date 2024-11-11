@@ -83,14 +83,17 @@ class App7 {
 
         this.inputNewTask.value = "";
         this.inputNewTask.focus();
+        this.checkMaxChars();
       } else {
         window.alert(
           "Digite a descrição da tarefa antes de adicioná-la a lista!"
         );
         this.inputNewTask.focus();
+        this.checkMaxChars();
       }
     } else {
       window.alert("O limite máximo é de até 200 caracteres!");
+      this.checkMaxChars();
     }
   }
 
