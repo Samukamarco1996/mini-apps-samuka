@@ -1,0 +1,71 @@
+/* VARIABLES IMPORT */
+@import "../variables.css";
+@import "../fonts.css";
+
+h3 {
+  margin: var(--average-unit);
+  text-align: center;
+}
+
+.operations-section {
+  border-bottom: 1px solid var(--main-color-medium);
+  margin: var(--average-unit);
+  padding: var(--average-unit);
+}
+
+.operations-section:nth-of-type(1),
+.operations-section:nth-of-type(2) {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--average-unit);
+}
+
+.operations-section:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--average-unit);
+}
+
+#app-div input {
+  width: 30%;
+  font-family: "Nunito";
+  font-size: 0.8rem;
+}
+
+#app-div button {
+  width: 30%;
+  background-color: var(--main-color-dark);
+  font-family: "Nunito";
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: var(--average-unit) calc(var(--average-unit) * 2);
+  border: none;
+  border-radius: var(--average-unit);
+  cursor: pointer;
+}
+
+/* SCREEN VARIATION - MEDIUM SCREENS */
+@media all and (min-width: 700px) and (max-width: 1000px) {
+}
+
+/* SCREEN VARIATION -  SMALL SCREENS*/
+@media all and (max-width: 699px) {
+  .operations-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: var(--average-unit);
+  }
+
+  #app-div input {
+    width: 80%;
+  }
+
+  #app-div button {
+    width: 60%;
+    padding: calc(var(--average-unit) * 2) calc(var(--average-unit) * 4);
+  }
+}
