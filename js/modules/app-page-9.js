@@ -35,9 +35,12 @@ class App9 {
   }
 
   sumOperation() {
-    const num1 = Number(this.inputsNumberValues[0].value);
-    const num2 = Number(this.inputsNumberValues[1].value);
-    if (this.isValidNumber(num1) && this.isValidNumber(num2)) {
+    if (
+      this.isValidNumber(this.inputsNumberValues[0].value) &&
+      this.isValidNumber(this.inputsNumberValues[1].value)
+    ) {
+      const num1 = Number(this.inputsNumberValues[0].value);
+      const num2 = Number(this.inputsNumberValues[1].value);
       window.alert(`${num1} + ${num2} = ${num1 + num2}`);
       this.inputsNumberValues[0].value = "";
       this.inputsNumberValues[1].value = "";
