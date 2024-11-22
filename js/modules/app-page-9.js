@@ -52,9 +52,12 @@ class App9 {
   }
 
   subtracionOperation() {
-    const num1 = Number(this.inputsNumberValues[2].value);
-    const num2 = Number(this.inputsNumberValues[3].value);
-    if (this.isValidNumber(num1) && this.isValidNumber(num2)) {
+    if (
+      this.isValidNumber(this.inputsNumberValues[2].value) &&
+      this.isValidNumber(this.inputsNumberValues[3].value)
+    ) {
+      const num1 = Number(this.inputsNumberValues[2].value);
+      const num2 = Number(this.inputsNumberValues[3].value);
       window.alert(`${num1} - ${num2} = ${num1 - num2}`);
       this.inputsNumberValues[2].value = "";
       this.inputsNumberValues[3].value = "";
