@@ -130,6 +130,7 @@ main {
 
 #main-title:hover {
   text-decoration: underline;
+  text-shadow: var(--average-unit) var(--average-unit) var(--average-unit) var(--main-color-light);
 }
 
 /* FOOTER TAG */
