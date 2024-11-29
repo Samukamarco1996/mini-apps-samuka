@@ -129,8 +129,7 @@ main {
 }
 
 #main-title:hover {
-  /* text-decoration: underline; */
-  text-shadow: var(--average-unit) var(--average-unit) var(--average-unit) var(--main-color-light);
+  text-decoration: underline;
 }
 
 /* FOOTER TAG */
