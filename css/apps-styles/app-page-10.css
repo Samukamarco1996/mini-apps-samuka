@@ -1,0 +1,66 @@
+/* VARIABLES IMPORT */
+@import "../variables.css";
+@import "../fonts.css";
+
+#app-div {
+  width: 80%;
+  min-height: 80dvh;
+  background-image: url("../../imgs/apps-imgs/app-page-10-img-001.jpg");
+  background-size: cover;
+  margin: var(--average-unit);
+  gap: var(--average-unit);
+  display: flex;
+  flex-direction: column;
+}
+
+#game-status-div,
+#game-main-div {
+  width: 100%;
+}
+
+#game-status-div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--average-unit);
+}
+
+/* #app-div input {
+  width: 30%;
+  font-family: "Nunito";
+  font-size: 0.8rem;
+}
+
+#app-div button {
+  width: 30%;
+  background-color: var(--main-color-dark);
+  font-family: "Nunito";
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: var(--average-unit) calc(var(--average-unit) * 2);
+  border: none;
+  border-radius: var(--average-unit);
+  cursor: pointer;
+} */
+
+/* SCREEN VARIATION - MEDIUM SCREENS */
+@media all and (min-width: 700px) and (max-width: 1000px) {
+}
+
+/* SCREEN VARIATION -  SMALL SCREENS*/
+@media all and (max-width: 699px) {
+  /* #app-div {
+    width: 90%;
+  }
+
+  #app-div input {
+    width: 80%;
+  }
+
+  #app-div button {
+    width: 60%;
+    padding: calc(var(--average-unit) * 2) calc(var(--average-unit) * 4);
+  } */
+}
